@@ -36,7 +36,7 @@ Here's a walkthrough of implemented user stories:
 
 First build
 
-<img src='http://i.imgur.com/9wVxVV5.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/5URzFg8.gif' title='Video Walkthrough' alt='Video Walkthrough' />
 
 
 ## Notes
