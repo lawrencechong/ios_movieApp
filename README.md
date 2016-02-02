@@ -2,7 +2,7 @@
 
 **ios_movieApp** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **3** hours spent in total
+Time spent: **1** hours spent in total
 
 ## User Stories
 
@@ -34,13 +34,13 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+First build
+<img src='http://i.imgur.com/9wVxVV5.gifv' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+- Thread 1: signal SIGABRT : this error likely means that you have a connection to a no longer existing outlet. This occured when I connected a label to an outlet I created, but then later deleted the outlet creating another one.
 
 ## License
 
