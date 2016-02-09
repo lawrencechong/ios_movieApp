@@ -85,14 +85,14 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         let title = movie["title"] as! String
         let overview = movie["overview"] as!
             String
-        let posterPath = movie["poster_path"] as! String
-        let base_url = "http://image.tmdb.org/t/p/w500"
-        let image_url = NSURL(string: base_url + posterPath )
-        
-        
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
-        cell.posterView.setImageWithURL(image_url!)
+        
+        if let posterPath = movie["poster_path"] as? String{
+            let base_url = "http://image.tmdb.org/t/p/w500"
+            let image_url = NSURL(string: base_url + posterPath)
+            cell.posterView.setImageWithURL(image_url!)
+        }
 
         return cell
     }
@@ -141,6 +141,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         })
 
         task.resume()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPathForCell(cell)
+        let movie = movies![indexPath!.row]
+        
+        let detailViewController = segue.destinationViewController as! DetailViewController
+        detailViewController.movie = movie
     }
 
 }
