@@ -94,7 +94,13 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             let image_url = NSURL(string: base_url + posterPath)
             cell.posterView.setImageWithURL(image_url!)
         }
-
+        cell.selectionStyle = .None
+        
+        // Use a red color when the user selects the cell
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.redColor()
+        cell.selectedBackgroundView = backgroundView
+        
         return cell
     }
     
